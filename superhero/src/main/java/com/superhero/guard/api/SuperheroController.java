@@ -1,7 +1,6 @@
 package com.superhero.guard.api;
 
 import com.superhero.guard.entity.Superhero;
-import com.superhero.guard.services.PowerService;
 import com.superhero.guard.services.SuperheroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
