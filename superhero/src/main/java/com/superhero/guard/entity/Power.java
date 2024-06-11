@@ -2,19 +2,21 @@ package com.superhero.guard.entity;
 
 import com.superhero.guard.entity.enums.PowerName;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.io.Serializable;
-
-import static jakarta.persistence.CascadeType.ALL;
 
 @Entity
 @Table (name = "power")
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @ToString
+@AllArgsConstructor
 public class Power implements Serializable {
 
     @Id
@@ -25,7 +27,11 @@ public class Power implements Serializable {
     @Column(name = "power_name")
     private PowerName powerName;
 
+    /*
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @ManyToOne(fetch = FetchType.LAZY, cascade = ALL, targetEntity = Superhero.class)
     @JoinColumn(name = "superhero_id")
-    private Superhero superhero;
+    @ToString.Exclude
+    private Superhero superhero; */
+
 }

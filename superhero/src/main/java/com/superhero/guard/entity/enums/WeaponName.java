@@ -8,7 +8,8 @@ public enum WeaponName {
 
     private final String displayName;
 
-    private WeaponName(String displayName) {
+
+    WeaponName(String displayName) {
         this.displayName = displayName;
     }
 

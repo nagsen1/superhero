@@ -9,13 +9,13 @@ public enum PowerName {
     GENIUS_INTELLIGENCE("Genius-Intelligence"),
     WEALTH("Wealth");
 
-    private final String displayName;
+    private final String value;
 
-    private PowerName(String displayName) {
-        this.displayName = displayName;
+    PowerName(String value) {
+        this.value = value;
     }
 
-    public String getDisplayName() {
-        return displayName;
+    public String getValue() {
+        return value;
     }
 }

@@ -1,22 +1,26 @@
 package com.superhero.guard.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
-import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
-import static jakarta.persistence.CascadeType.ALL;
+import static jakarta.persistence.CascadeType.*;
 
 @Entity
-@Table (name = "superhero")
+@Table(name = "superhero")
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @ToString
-public class Superhero implements Serializable {
+@AllArgsConstructor
+public class Superhero {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,16 +41,46 @@ public class Superhero implements Serializable {
     @Column (name = "origin", columnDefinition = "TEXT")
     private String origin;
 
-
+    /*
+    @ToString.Exclude
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "superhero", cascade = ALL, targetEntity = Power.class)
     private List<Power> powers;
 
+    @ToString.Exclude
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "superhero", cascade = ALL, targetEntity = Weapon.class)
     private List<Weapon> weapons;
 
+    @ToString.Exclude
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "superhero", cascade = ALL, targetEntity = Association.class)
+    private List<Association> associations; */
+
+    @ToString.Exclude
+    @OneToMany(fetch = FetchType.LAZY,  cascade = ALL )
+    @JoinColumn(name = "fk_superhero_id", referencedColumnName = "id")
+    private List<Power> powers;
+
+    @ToString.Exclude
+    @OneToMany(fetch = FetchType.LAZY, cascade = ALL)
+    @JoinColumn(name = "fk_superhero_id", referencedColumnName = "id")
+    private List<Weapon> weapons;
+
+    @ToString.Exclude
+    @OneToMany(fetch = FetchType.LAZY, cascade = ALL)
+    @JoinColumn(name = "fk_superhero_id", referencedColumnName = "id")
     private List<Association> associations;
 
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Superhero superhero = (Superhero) o;
+        return Objects.equals(id, superhero.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }

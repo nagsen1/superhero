@@ -14,7 +14,7 @@ public enum AssociationName {
 
     private final String displayName;
 
-    private AssociationName(String displayName) {
+    AssociationName(String displayName) {
         this.displayName = displayName;
     }
 
@@ -22,4 +22,5 @@ public enum AssociationName {
         return displayName;
     }
 }
+
 
