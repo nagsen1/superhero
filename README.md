@@ -172,11 +172,16 @@ The response will be in JSON format and will contain information about the super
     ]
 }
 
-
 ### Delete superhero
 - Description: Delete a id specified superhero.
 - Request Body:
-  -  Path Variable Integer "id"
+  -  Path Variable Integer "id".
+
+## Request Body
+This request does not require a request body.
+
+## Response Body
+This does not have any response body.
 
 
 ## Database
