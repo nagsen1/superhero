@@ -3,6 +3,10 @@
 
 - [Superhero API](#superhero-api)
   * [Overview](#overview)
+  * [Build](#build)
+  * [Run](#run)
+  * [Connect to docker](#connect-to-docker)
+  * [Connect to database](#connect-to-database)
 - [Explore REST APIs](#explore-rest-apis)
   * [superhero]
     + [Create superhero](#create-superhero)
@@ -23,6 +27,24 @@
 - This project is a Superhero `RESTful API` designed to **create Superhero and perform database operation.**
 - The user can create a superhero, find all the existing superheroes in the database, and delete a superhero as well.
 - The Superhero-API follows a standard "`Controller` <->  (Only interacts with Controller) <-> `Service` <-> `Repository` <-> `Database`" API schema.
+
+## Build
+
+- This is build using docker compose file, so below command will build and up the docker container
+- Dockerfile-superhero-postgres - Docker container for postgres
+- Dockerfile-superhero-springboot - Docker container for running superhero superhero-0.0.1-SNAPSHOT.jar
+- docker-compose.yml - Docker compose file to run above docker containers
+- command:
+mvn clean install
+
+## Run
+docker-compose up --build
+
+## Connect to Docker
+docker exec -it superhero-postgres bash
+
+## connect to database 
+psql -U superhero -d superhero_db   (superhero: database user and superhero_db: databasename)
 
 
 # Explore REST APIs
