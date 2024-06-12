@@ -11,8 +11,9 @@
   * [superhero]
     + [Create superhero](#create-superhero)
     + [Get all existing superheros](#get-all-existing-superheros)
+    + [Delete a id specified superhero](#delete-a-id-specified-superhero)
     + [Get a id specified superhero](#get-a-id-specified-superhero)
-    + [Delete superhero](#delete-superhero)
+   
 
 - [Database](#database)
   * [superhero](#superhero)
@@ -231,6 +232,21 @@ The response is in JSON format and represents an array of superhero objects. Eac
     }
 ]
 
+### Delete a id specified superhero
+- Description: This endpoint is used to delete a superhero with the specified ID.
+
+## Request Body
+No request body is required for this endpoint.
+URL Parameters
+superheroId (integer): The ID of the superhero to be deleted.
+
+## Response Body
+Upon successful deletion, the server returns a 204 status code with no content.
+Status Code: 204
+Content Type: text/xml
+
+
+
 
 ### Get a id specified superhero
 - Description: Request Description
@@ -290,6 +306,10 @@ The response will be in JSON format and will contain information about the super
         }
     ]
 }
+
+
+
+
 
 
 
