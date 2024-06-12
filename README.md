@@ -50,8 +50,6 @@ This endpoint allows you to create a new superhero by sending a POST request to 
 - associations (array) - An array of associations with other entities, each containing:
 - associationName (string) - The name of the association.
 
-
-
 - Request Body:
    ```json
      {
@@ -125,6 +123,7 @@ This request does not require a request body.
 ## Response Body
 The response will be in JSON format and will contain information about the superhero, including the superhero's ID, creation and update timestamps, alias, name, origin, powers, weapons, and associations.
 
+- Response Body:
 ```json
 {
     "id": 5,
@@ -171,7 +170,6 @@ The response will be in JSON format and will contain information about the super
             "associationName": "KREE"
         }
     ]
-}
 }
 
 
