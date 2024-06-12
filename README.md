@@ -31,8 +31,8 @@
 
 ## Build
 
-- This is build using docker compose file, so below command will build and up the docker container
-- Dockerfile-superhero-postgres - Docker container for postgres
+- This is build using docker-compose file, so the below command will build and up the docker container
+- Dockerfile-superhero-postgres - Docker container for Postgres
 - Dockerfile-superhero-springboot - Docker container for running superhero superhero-0.0.1-SNAPSHOT.jar
 - docker-compose.yml - Docker compose file to run above docker containers
 - command:
@@ -77,10 +77,10 @@ psql -U superhero -d superhero_db   (superhero: database user and superhero_db: 
 
 | Method | Endpoint | Description | Valid API Calls |
 | ------ | --- | ----------- | ------------------------- |
-| POST | /api/superhero| Create a superhero object | [#http://localhost:8080/api/superhero] |
-| GET | /api/superhero | Get all existing superheros | (#http://localhost:8080/api/superhero) |
-| GET | /api/superhero/{id} | Get a id specified superhero | [Get a id specified superhero](#http://localhost:8080/api/superhero/{id}) |
-| DELETE | /api/superhero/{id} | Delete a id specified superhero  | [Delete a id specified](#http://localhost:8080/api/superhero/{id}) |
+| POST | /api/superhero| Create a superhero object | (http://localhost:8080/api/superhero) |
+| GET | /api/superhero | Get all existing superheros | (http://localhost:8080/api/superhero) |
+| GET | /api/superhero/{id} | Get a id specified superhero | (http://localhost:8080/api/superhero/{id}) |
+| DELETE | /api/superhero/{id} | Delete a id specified superhero  | (http://localhost:8080/api/superhero/{id}) |
 
 
 ### Create superhero
