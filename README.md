@@ -112,6 +112,103 @@ The response is in JSON format and represents an array of superhero objects. Eac
 - associations (array): An array of objects representing the associations or groups the superhero is affiliated with. Each association object contains an id (number) and 
   associationName (string).
 
+- Response Body:
+   ```json
+   [
+    {
+        "id": 5,
+        "createdAt": "2024-06-11T14:00:00.000+00:00",
+        "updatedAt": "2024-06-11T14:00:00.000+00:00",
+        "alias": "Iron Man",
+        "name": "Tony Stark",
+        "origin": "Kidnapped in Afghanistan, created the first iron-man suit to escape.",
+        "powers": [
+            {
+                "id": 9,
+                "powerName": "GENIUS_INTELLIGENCE"
+            },
+            {
+                "id": 10,
+                "powerName": "WEALTH"
+            }
+        ],
+        "weapons": [
+            {
+                "id": 4,
+                "weaponName": "ARC_REACTOR"
+            },
+            {
+                "id": 5,
+                "weaponName": "IRON_MAN_SUIT"
+            },
+            {
+                "id": 6,
+                "weaponName": "IRON_LEGION"
+            }
+        ],
+        "associations": [
+            {
+                "id": 1,
+                "associationName": "SPACE_STONE"
+            },
+            {
+                "id": 2,
+                "associationName": "SKRULLS"
+            },
+            {
+                "id": 3,
+                "associationName": "KREE"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "createdAt": "2024-06-11T14:00:00.000+00:00",
+        "updatedAt": "2024-06-11T14:00:00.000+00:00",
+        "alias": "Iron Man",
+        "name": "Tony Stark",
+        "origin": "Kidnapped in Afghanistan, created the first iron-man suit to escape.",
+        "powers": [
+            {
+                "id": 11,
+                "powerName": "GENIUS_INTELLIGENCE"
+            },
+            {
+                "id": 12,
+                "powerName": "WEALTH"
+            }
+        ],
+        "weapons": [
+            {
+                "id": 7,
+                "weaponName": "ARC_REACTOR"
+            },
+            {
+                "id": 8,
+                "weaponName": "IRON_MAN_SUIT"
+            },
+            {
+                "id": 9,
+                "weaponName": "IRON_LEGION"
+            }
+        ],
+        "associations": [
+            {
+                "id": 4,
+                "associationName": "SPACE_STONE"
+            },
+            {
+                "id": 5,
+                "associationName": "SKRULLS"
+            },
+            {
+                "id": 6,
+                "associationName": "KREE"
+            }
+        ]
+    }
+]
+
 
 ### Get a id specified superhero
 - Description: Request Description
@@ -171,6 +268,8 @@ The response will be in JSON format and will contain information about the super
         }
     ]
 }
+
+
 
 
 
