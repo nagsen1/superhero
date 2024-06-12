@@ -30,4 +30,8 @@ public class SuperheroService {
     public List<Superhero> findAll() {
         return superheroRepository.findAll();
     }
+
+    public void deleteById(Long id){
+        superheroRepository.deleteById(id);
+    }
 }
