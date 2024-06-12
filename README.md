@@ -45,7 +45,30 @@ docker-compose up --build
 docker exec -it superhero-postgres bash
 
 ## connect to database 
-psql -U superhero -d superhero_db   (superhero: database user and superhero_db: databasename)
+psql -U superhero -d superhero_db   (superhero: database user and superhero_db: database name)
+
+# Testing
+- Tests for this project incorporated both JUnit and TestContainers database DRUD operation tests.
+- Database connection test is also present to check the connectivity
+
+
+
+# Tech Stack
+
+- API Creation:
+  - Java 17
+  - Postgres 13
+  - SpringBoot 3.2.6
+  - Hibernate
+  - JPA
+  - Lombok 
+  - 
+- Testing:
+  - junit-jupiter 1.19.8
+  - postgres
+  - testcontainers
+- User Input Testing:
+  - Postman
 
 
 # Explore REST APIs
@@ -54,7 +77,7 @@ psql -U superhero -d superhero_db   (superhero: database user and superhero_db: 
 
 | Method | Endpoint | Description | Valid API Calls |
 | ------ | --- | ----------- | ------------------------- |
-| POST | /api/superhero| Create a superhero object | [Create superhero](#http://localhost:8080/api/superhero) |
+| POST | /api/superhero| Create a superhero object | [Create superhero][#http://localhost:8080/api/superhero] |
 | GET | /api/superhero | Get all existing superheros | [Get all existing superheros](#http://localhost:8080/api/superhero) |
 | GET | /api/superhero/{id} | Get a id specified superhero | [Get a id specified superhero](#http://localhost:8080/api/superhero/{id}) |
 | DELETE | /api/superhero/{id} | Delete a id specified superhero  | [Delete a id specified](#http://localhost:8080/api/superhero/{id}) |
