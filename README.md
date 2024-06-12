@@ -172,43 +172,6 @@ The response will be in JSON format and will contain information about the super
     ]
 }
 
-### Delete superhero
-- Description: Delete a id specified superhero.
-- Request Body:
-  -  Path Variable Integer "id".
-
-## Request Body
-This request does not require a request body.
-
-## Response Body
-This does not have any response body.
-
-
-## Database
-- The database structure contains two tables, a `hotel` table that contains the superhero object.
-- And a `reservation` table that contains reservations objects and is associated with the `hotel` table through the `superhero table's Id` by storing it as a foreign key in its "superhero Id" value.
-- The table structures and values are as follows:
-
-
-## Testing
-- Tests for this project incorporated both testContainers and database CRUD operation tests.
-
-
-## Tech Stack
-
-- API Creation:
-  - Java 17
-  - Postgres
-  - SpringBoot
-  - Hibernate
-  - JPA
-  - Lombok
-- Testing:
-  - JUnit 5
-  - testcontainers
-  - postgresql-testcontainer
-- User Input Testing:
-  - Postman
 
 
 
