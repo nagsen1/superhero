@@ -77,8 +77,8 @@ psql -U superhero -d superhero_db   (superhero: database user and superhero_db: 
 
 | Method | Endpoint | Description | Valid API Calls |
 | ------ | --- | ----------- | ------------------------- |
-| POST | /api/superhero| Create a superhero object | [Create superhero][#http://localhost:8080/api/superhero] |
-| GET | /api/superhero | Get all existing superheros | [Get all existing superheros](#http://localhost:8080/api/superhero) |
+| POST | /api/superhero| Create a superhero object | [#http://localhost:8080/api/superhero] |
+| GET | /api/superhero | Get all existing superheros | (#http://localhost:8080/api/superhero) |
 | GET | /api/superhero/{id} | Get a id specified superhero | [Get a id specified superhero](#http://localhost:8080/api/superhero/{id}) |
 | DELETE | /api/superhero/{id} | Delete a id specified superhero  | [Delete a id specified](#http://localhost:8080/api/superhero/{id}) |
 
