@@ -31,10 +31,10 @@
 
 | Method | Endpoint | Description | Valid API Calls |
 | ------ | --- | ----------- | ------------------------- |
-| POST | /api/superhero| Create a superhero object | [Create superhero](#(http://localhost:8080/api/superhero)) |
-| GET | /api/superhero | Get all existing superheros | [Get all existing superheros](#(http://localhost:8080/api/superhero)) |
-| GET | /api/superhero/{id} | Get a id specified superhero | [Get a id specified superhero](#(http://localhost:8080/api/superhero/{id})) |
-| DELETE | /api/superhero/{id} | Delete a id specified superhero  | [Delete a id specified](#(http://localhost:8080/api/superhero/{id})) |
+| POST | /api/superhero| Create a superhero object | [Create superhero](#http://localhost:8080/api/superhero) |
+| GET | /api/superhero | Get all existing superheros | [Get all existing superheros](#http://localhost:8080/api/superhero) |
+| GET | /api/superhero/{id} | Get a id specified superhero | [Get a id specified superhero](#http://localhost:8080/api/superhero/{id}) |
+| DELETE | /api/superhero/{id} | Delete a id specified superhero  | [Delete a id specified](#http://localhost:8080/api/superhero/{id}) |
 
 
 ### Create superhero
@@ -180,17 +180,17 @@ The response will be in JSON format and will contain information about the super
   -  Path Variable Integer "id"
 
 
-# Database
+## Database
 - The database structure contains two tables, a `hotel` table that contains the superhero object.
 - And a `reservation` table that contains reservations objects and is associated with the `hotel` table through the `superhero table's Id` by storing it as a foreign key in its "superhero Id" value.
 - The table structures and values are as follows:
 
 
-# Testing
+## Testing
 - Tests for this project incorporated both testContainers and database CRUD operation tests.
 
 
-# Tech Stack
+## Tech Stack
 
 - API Creation:
   - Java 17
