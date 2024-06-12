@@ -7,7 +7,7 @@
   * [superhero]
     + [Create superhero](#create-superhero)
     + [Get all existing superheros](#get-all-existing-superheros)
-    + [Get a specified superhero](#get-a-specified-superhero)
+    + [Get a id specified superhero](#get-a-id-specified-superhero)
     + [Delete superhero](#delete-superhero)
 
 - [Database](#database)
@@ -174,7 +174,7 @@ The response will be in JSON format and will contain information about the super
 }
 
 
-### Delete superheros
+### Delete superhero
 - Description: Delete a id specified superhero.
 - Request Body:
   -  Path Variable Integer "id"
