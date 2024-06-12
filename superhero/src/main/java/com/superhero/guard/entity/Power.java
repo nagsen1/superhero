@@ -8,8 +8,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.io.Serializable;
-
 @Entity
 @Table (name = "power")
 @Getter
@@ -17,21 +15,18 @@ import java.io.Serializable;
 @NoArgsConstructor
 @ToString
 @AllArgsConstructor
-public class Power implements Serializable {
+public class Power {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter
     private Long id;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "power_name")
     private PowerName powerName;
 
-    /*
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    @ManyToOne(fetch = FetchType.LAZY, cascade = ALL, targetEntity = Superhero.class)
-    @JoinColumn(name = "superhero_id")
-    @ToString.Exclude
-    private Superhero superhero; */
-
+    public Power(PowerName powerName) {
+        this.powerName = powerName;
+    }
 }

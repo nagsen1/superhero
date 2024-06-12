@@ -41,19 +41,6 @@ public class Superhero {
     @Column (name = "origin", columnDefinition = "TEXT")
     private String origin;
 
-    /*
-    @ToString.Exclude
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "superhero", cascade = ALL, targetEntity = Power.class)
-    private List<Power> powers;
-
-    @ToString.Exclude
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "superhero", cascade = ALL, targetEntity = Weapon.class)
-    private List<Weapon> weapons;
-
-    @ToString.Exclude
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "superhero", cascade = ALL, targetEntity = Association.class)
-    private List<Association> associations; */
-
     @ToString.Exclude
     @OneToMany(fetch = FetchType.LAZY,  cascade = ALL )
     @JoinColumn(name = "fk_superhero_id", referencedColumnName = "id")
@@ -69,7 +56,16 @@ public class Superhero {
     @JoinColumn(name = "fk_superhero_id", referencedColumnName = "id")
     private List<Association> associations;
 
-
+    public Superhero(Date createdAt, Date updatedAt, String alias, String name, String origin, List<Power> powers, List<Weapon> weapons, List<Association> associations) {
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.alias = alias;
+        this.name = name;
+        this.origin = origin;
+        this.powers = powers;
+        this.weapons = weapons;
+        this.associations = associations;
+    }
 
     @Override
     public boolean equals(Object o) {

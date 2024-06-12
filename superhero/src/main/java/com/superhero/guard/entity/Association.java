@@ -23,4 +23,7 @@ public class Association {
     @Column
     private AssociationName associationName;
 
+    public Association(AssociationName associationName) {
+        this.associationName = associationName;
+    }
 }

@@ -7,15 +7,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.io.Serializable;
-
 @Entity
 @Table (name = "weapon")
 @Getter
 @Setter
 @NoArgsConstructor
 @ToString
-public class Weapon implements Serializable {
+public class Weapon {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,4 +23,7 @@ public class Weapon implements Serializable {
     @Column
     private WeaponName weaponName;
 
+    public Weapon(WeaponName weaponName) {
+        this.weaponName = weaponName;
+    }
 }
