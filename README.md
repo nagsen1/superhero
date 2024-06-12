@@ -115,7 +115,7 @@ The response is in JSON format and represents an array of superhero objects. Eac
   associationName (string).
 
 
-### Get a id specified superheros
+### Get a id specified superhero
 - Description: Request Description
 This endpoint is used to retrieve information about a specific superhero by providing the superhero's ID in the request URL.
 
