@@ -329,14 +329,3 @@ The response will be in JSON format and will contain information about the super
         }
     ]
 }
-
-
-
-
-
-
-
-
-
-
-
